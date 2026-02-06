@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;spi_demo/Adafruit_OLED.c&apos; to &apos;Adafruit_SSD1351.c&apos;" description="Rename resource &apos;Adafruit_OLED.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Adafruit_OLED.c" name="Adafruit_SSD1351.c" stamp="1769212506440" updateReferences="true"/>
+</session>
