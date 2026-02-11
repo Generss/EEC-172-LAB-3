@@ -6,13 +6,13 @@
 Building file: "../main.c"
 Invoking: Arm Compiler
 "C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/Josh/Desktop/EEC 172/labs/lab3_part1/spi_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
-"../main.c", line 283: warning #1238-D: excess initializers are ignored
-"../main.c", line 317: warning #169-D: argument of type "const char *" is incompatible with parameter of type "char *"
-"../main.c", line 317: warning #169-D: argument of type "const char *" is incompatible with parameter of type "char *"
-"../main.c", line 317: warning #169-D: argument of type "const char *" is incompatible with parameter of type "char *"
-"../main.c", line 359: warning #225-D: function "alphabet" declared implicitly
-"../main.c", line 361: warning #225-D: function "horizontallines" declared implicitly
-"../main.c", line 363: warning #225-D: function "verticallines" declared implicitly
+"../main.c", line 347: warning #1238-D: excess initializers are ignored
+"../main.c", line 381: warning #169-D: argument of type "const char *" is incompatible with parameter of type "char *"
+"../main.c", line 381: warning #169-D: argument of type "const char *" is incompatible with parameter of type "char *"
+"../main.c", line 381: warning #169-D: argument of type "const char *" is incompatible with parameter of type "char *"
+"../main.c", line 430: warning #225-D: function "alphabet" declared implicitly
+"../main.c", line 432: warning #225-D: function "horizontallines" declared implicitly
+"../main.c", line 434: warning #225-D: function "verticallines" declared implicitly
 Finished building: "../main.c"
  
 Building target: "spi_demo.out"

@@ -96,6 +96,12 @@
 #define MASTER_MSG       "This is CC3200 SPI Master Application\n\r"
 #define SLAVE_MSG        "This is CC3200 SPI Slave Application\n\r"
 
+#define DELTA_LOG_SIZE 128
+
+volatile uint32_t delta_log[DELTA_LOG_SIZE];
+volatile uint32_t delta_log_idx = 0;
+volatile uint8_t delta_log_full = 0;
+
 //*****************************************************************************
 //                 GLOBAL VARIABLES -- Start
 //*****************************************************************************
@@ -124,6 +130,42 @@ extern uVectorEntry __vector_table;
 // (PERIOD_SEC) * (SYSCLKFREQ) = PERIOD_TICKS
 #define SYSTICK_RELOAD_VAL 3200000UL
 
+typedef struct {
+    uint16_t code;
+    const char *name;
+} IRKeyEntry;
+
+static const IRKeyEntry ir_key_table[] = {
+    { 255,   "KEY_0" },
+    { 32895, "KEY_1" },
+    { 16575, "KEY_2" },
+    { 49215, "KEY_3" },
+    { 8415,  "KEY_4" },
+    { 41055, "KEY_5" },
+    { 24735, "KEY_6" },
+    { 57375, "KEY_7" },
+    { 4335,  "KEY_8" },
+    { 36975, "KEY_9" },
+    { 765,   "KEY_LAST" },
+    { 0xE817, "KEY_ENTER"}
+
+};
+
+typedef enum {
+    KEY_0     = 255,
+    KEY_1     = 32895,
+    KEY_2     = 16575,
+    KEY_3     = 49215,
+    KEY_4     = 8415,
+    KEY_5     = 41055,
+    KEY_6     = 24735,
+    KEY_7     = 57375,
+    KEY_8     = 4335,
+    KEY_9     = 36975,
+    KEY_LAST = 765
+} IRKey;
+
+
 // track systick counter periods elapsed
 // if it is not 0, we know the transmission ended
 volatile int systick_cnt = 0;
@@ -135,6 +177,16 @@ volatile unsigned long SW3_intcount;
 volatile unsigned char SW2_intflag;
 volatile unsigned char SW3_intflag;
 
+
+volatile uint8_t newValueSet = 0;
+volatile int lastCode = 0x00;
+
+volatile unsigned int bufferIntro = 0x00;
+volatile unsigned int bufferData = 0x00;
+volatile uint8_t edgesDetected = 0;
+
+
+
 typedef struct PinSetting {
     unsigned long port;
     unsigned int pin;
@@ -142,6 +194,7 @@ typedef struct PinSetting {
 
 static const PinSetting switch2 = { .port = GPIOA2_BASE, .pin = 0x40};
 static const PinSetting switch3 = { .port = GPIOA1_BASE, .pin = 0x20};
+static const PinSetting infared = { .port = GPIOA0_BASE, .pin = 0x1};
 //*****************************************************************************
 //                 GLOBAL VARIABLES -- End
 //*****************************************************************************
@@ -157,6 +210,16 @@ static const PinSetting switch3 = { .port = GPIOA1_BASE, .pin = 0x20};
 //
 //*****************************************************************************
 
+const IRKeyEntry* ir_lookup(uint16_t code)
+{
+    int i;
+    for (i = 0; i < sizeof(ir_key_table)/sizeof(ir_key_table[0]); i++) {
+        if (ir_key_table[i].code == code) {
+            return &ir_key_table[i];
+        }
+    }
+    return NULL;
+}
 
 static void GPIOA1IntHandler(void) { // SW3 handler
     unsigned long ulStatus;
@@ -220,6 +283,7 @@ BoardInit(void)
     //
     MAP_IntMasterEnable();
     MAP_IntEnable(FAULT_SYSTICK);
+
 
     PRCMCC3200MCUInit();
 
@@ -337,15 +401,22 @@ void playGame() {
               }
         while(choice_not_made) {
 
-            if(GPIOPinRead(GPIOA1_BASE, 0x20)) {
+            if(!newValueSet) continue;
+
+
+            //if(GPIOPinRead(GPIOA1_BASE, 0x20)) {
+            if(lastCode == KEY_1) {
                 current_dialogue_position = destination[current_dialogue_position][0];
                 choice_not_made = 0;
 
             }
-            if(GPIOPinRead(GPIOA2_BASE, 0x40)) {
+            //if(GPIOPinRead(GPIOA2_BASE, 0x40)) {
+            if(lastCode == KEY_2) {
                 current_dialogue_position = destination[current_dialogue_position][1];
                 choice_not_made = 0;
             }
+
+            newValueSet = 0;
         }
         MAP_UtilsDelay(10000);
     }
@@ -382,6 +453,129 @@ void runOledTest() {
 
 
 }
+void PrintDeltaLog(void)
+{
+    uint32_t i;
+    uint32_t count = delta_log_full ? DELTA_LOG_SIZE : delta_log_idx;
+
+    Report("\r\n---- delta_us log (%lu entries) ----\r\n", count);
+
+    for (i = 0; i < count; i++) {
+        Report("%lu", delta_log[i]);
+        if (i != count - 1) {
+            Report(", ");
+        }
+        if ((i & 7) == 7) {
+            Report("\r\n");
+        }
+    }
+    Report("\r\n----------------------------------\r\n");
+}
+
+
+static void GPIOInfaredHandler(void) { //Pin 55 infared handler
+    unsigned long ulStatus;
+
+
+    //printf("Made it to handler");
+    ulStatus = MAP_GPIOIntStatus(infared.port, true);
+    MAP_GPIOIntClear(infared.port, ulStatus);
+
+    // read the countdown register and compute elapsed cycles
+    uint64_t delta = SYSTICK_RELOAD_VAL - SysTickValueGet();
+    // convert elapsed cycles to microseconds
+    uint64_t delta_us = TICKS_TO_US(delta);
+
+    //The systick wrapped around itself, need to restart
+    if (systick_cnt > 0) {
+        edgesDetected = 0;
+        bufferData = 0;
+        SysTickReset();
+        return;
+    }
+
+    //for the start bit
+    if (delta_us > 12000 && delta_us < 16000) {
+        edgesDetected = 0;
+        bufferData = 0;
+        SysTickReset();
+        return;
+    }
+
+    //to deal with any other large gap, if there is one it's not our remote
+    if (delta_us > 4000) {
+        edgesDetected = 0;
+        bufferData = 0;
+        SysTickReset();
+        return;
+    }
+
+
+    /*
+    if (!delta_log_full) {
+        delta_log[delta_log_idx++] = (uint32_t)delta_us;
+        if (delta_log_idx >= DELTA_LOG_SIZE) {
+            delta_log_full = 1;
+        }
+    }
+    */
+
+    uint8_t changeBit;
+    if (delta_us > 900 && delta_us < 1500) {
+        changeBit = 0;
+    }
+    else if (delta_us > 1800 && delta_us < 2800) {
+        changeBit = 1;
+    }
+    else {
+        // leader / gap / noise
+        SysTickReset();
+        return;
+    }
+
+    if(edgesDetected < 32) {
+        bufferData = bufferData << 1;
+        bufferData += changeBit;
+        edgesDetected++;
+    }
+
+
+    SysTickReset();
+    if(edgesDetected >= 32) {
+
+        uint16_t intro = bufferData >> 16;
+
+        if (intro == 0x02FD) {
+            lastCode = bufferData & 0xFFFF;;
+            newValueSet = 1;
+        }
+        edgesDetected = 0;
+        bufferIntro = 0x00;
+        bufferData = 0x00;
+
+    }
+
+
+}
+
+void keyMappingTest(void) {
+    while(1) {
+
+        Report("checking if ValueSet ");
+        while(!newValueSet) {}
+        newValueSet = 0;
+        //Report("lastCode = %d\r\n ", lastCode);
+        const IRKeyEntry *key = ir_lookup(lastCode);
+        if (key) {
+            Report("Pressed %s (0x%X)\r\n", key->name, key->code);
+        }
+        else {
+            Report("Pressed (0x%X)\r\n", lastCode);
+        }
+    }
+
+
+}
 
 
 
@@ -401,6 +595,7 @@ void main()
     // Initialize Board configurations
     //
     BoardInit();
+
 
     //
     // Muxing UART and SPI lines.
@@ -433,6 +628,17 @@ void main()
 
     // Enable SysTick
     SysTickInit();
+
+
+    MAP_GPIOIntRegister(infared.port, GPIOInfaredHandler);
+
+    MAP_GPIOIntTypeSet(infared.port, infared.pin, GPIO_FALLING_EDGE);
+
+    ulStatus = MAP_GPIOIntStatus(infared.port, false); // clear interrupts for GPIO0
+    MAP_GPIOIntClear(infared.port, ulStatus);
+
+    MAP_GPIOIntEnable(infared.port, infared.pin);
+
 
     MAP_GPIOIntRegister(GPIOA1_BASE, GPIOA1IntHandler);
     MAP_GPIOIntRegister(switch2.port, GPIOA2IntHandler);
@@ -484,43 +690,11 @@ void main()
 
     //playGame();
     //runOledTest();
-
-
-    while (1) {
-        // reset the countdown register
-        SysTickReset();
-
-        /*
-        while ((SW2_intflag==0) && (SW3_intflag==0)) {;}
-        if (SW2_intflag) {
-            SW2_intflag=0;  // clear flag
-            Report("SW2 ints = %d\tSW3 ints = %d\r\n",SW2_intcount,SW3_intcount);
-        }
-        if (SW3_intflag) {
-            SW3_intflag=0;  // clear flag
-            Report("SW2 ints = %d\tSW3 ints = %d\r\n",SW2_intcount,SW3_intcount);
-        }
-        */
-        MAP_UtilsDelay(3000);
-
-
-        // read the countdown register and compute elapsed cycles
-        uint64_t delta = SYSTICK_RELOAD_VAL - SysTickValueGet();
-
-        // convert elapsed cycles to microseconds
-        uint64_t delta_us = TICKS_TO_US(delta);
-
-        //Don't uncomment below. It wrapos around at 40ms at all times.
-        //uint64_t secs = delta_us / 1000000;
-
-
-
-        // print measured time to UART
-        Report("cycles = %llu\tus = %llu\r\n",
-               (unsigned long long)delta,
-               (unsigned long long)delta_us);
-    }
+    keyMappingTest();
 
 
 }
+
+
+
 

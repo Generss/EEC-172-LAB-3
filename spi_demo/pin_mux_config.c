@@ -95,6 +95,10 @@ void PinMuxConfig(void)
     PinTypeGPIO(PIN_04, PIN_MODE_0, false);
     GPIODirModeSet(GPIOA1_BASE, 0x20, GPIO_DIR_MODE_IN);
 
+    //Configure PIN_55 Input
+    PinTypeGPIO(PIN_55, PIN_MODE_0, false);
+    GPIODirModeSet(GPIOA0_BASE, 0x2, GPIO_DIR_MODE_IN);
+
     //
     // Configure PIN_15 for GPIO Input
     //
@@ -147,7 +151,7 @@ void PinMuxConfig(void)
     //
     // Configure PIN_50 for UART0 UART0_CTS
     //
-    PinTypeUART(PIN_50, PIN_MODE_12);
+    //PinTypeUART(PIN_50, PIN_MODE_12);
 
     //
     // Configure PIN_55 for UART0 UART0_TX
