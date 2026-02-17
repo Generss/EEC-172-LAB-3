@@ -80,6 +80,10 @@ unsigned int ilen=1;
 //! \return none
 //
 //*****************************************************************************
+
+
+
+
 void 
 InitTerm()
 {
@@ -87,6 +91,8 @@ InitTerm()
   MAP_UARTConfigSetExpClk(CONSOLE,MAP_PRCMPeripheralClockGet(CONSOLE_PERIPH), 
                   UART_BAUD_RATE, (UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE |
                    UART_CONFIG_PAR_NONE));
+
+
 #endif
   __Errorlog = 0;
 }
