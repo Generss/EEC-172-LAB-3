@@ -4,6 +4,7 @@
 "./oled_test.obj"
 "./pin_mux_config.obj"
 "./startup_ccs.obj"
+"./systick_utils.obj"
 "./typing.obj"
 "./uart_if.obj"
 "../cc3200v1p32.cmd"

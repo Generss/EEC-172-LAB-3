@@ -15,6 +15,7 @@ C_SRCS += \
 ../oled_test.c \
 ../pin_mux_config.c \
 C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/startup_ccs.c \
+../systick_utils.c \
 ../typing.c \
 ../uart_if.c 
 
@@ -25,6 +26,7 @@ C_DEPS += \
 ./oled_test.d \
 ./pin_mux_config.d \
 ./startup_ccs.d \
+./systick_utils.d \
 ./typing.d \
 ./uart_if.d 
 
@@ -35,6 +37,7 @@ OBJS += \
 ./oled_test.obj \
 ./pin_mux_config.obj \
 ./startup_ccs.obj \
+./systick_utils.obj \
 ./typing.obj \
 ./uart_if.obj 
 
@@ -45,6 +48,7 @@ OBJS__QUOTED += \
 "oled_test.obj" \
 "pin_mux_config.obj" \
 "startup_ccs.obj" \
+"systick_utils.obj" \
 "typing.obj" \
 "uart_if.obj" 
 
@@ -55,6 +59,7 @@ C_DEPS__QUOTED += \
 "oled_test.d" \
 "pin_mux_config.d" \
 "startup_ccs.d" \
+"systick_utils.d" \
 "typing.d" \
 "uart_if.d" 
 
@@ -65,6 +70,7 @@ C_SRCS__QUOTED += \
 "../oled_test.c" \
 "../pin_mux_config.c" \
 "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/startup_ccs.c" \
+"../systick_utils.c" \
 "../typing.c" \
 "../uart_if.c" 
 

@@ -75,36 +75,25 @@
 #include "systick.h"
 #include "typing.h"
 
+
 // Common interface includes
 #include "uart_if.h"
 #include "pin_mux_config.h"
 
+#include "systick_utils.h"
+
 
 #define APPLICATION_VERSION     "1.4.0"
-//*****************************************************************************
-//
-// Application Master/Slave mode selector macro
-//
-// MASTER_MODE = 1 : Application in master mode
-// MASTER_MODE = 0 : Application in slave mode
-//
-//*****************************************************************************
-#define MASTER_MODE      1
+
 
 #define SPI_IF_BIT_RATE  100000
-#define TR_BUFF_SIZE     100
 
-#define MASTER_MSG       "This is CC3200 SPI Master Application\n\r"
-#define SLAVE_MSG        "This is CC3200 SPI Slave Application\n\r"
-
-#define DELTA_LOG_SIZE 128
-
-#define SENDER 0
+#define SENDER 1
 
 
-volatile uint32_t delta_log[DELTA_LOG_SIZE];
-volatile uint32_t delta_log_idx = 0;
-volatile uint8_t delta_log_full = 0;
+//*****************************************************************************
+//                 GLOBAL VARIABLES -- Start
+//*****************************************************************************
 
 int messageIndex = 0;
 volatile char cBuff[625];
@@ -113,9 +102,6 @@ volatile int rx_read  = 0;
 volatile int charIndex = 0;
 volatile uint8_t newCharSet = 0;
 
-//*****************************************************************************
-//                 GLOBAL VARIABLES -- Start
-//*****************************************************************************
 #if defined(ccs)
 extern void (* const g_pfnVectors[])(void);
 #endif
@@ -123,23 +109,7 @@ extern void (* const g_pfnVectors[])(void);
 extern uVectorEntry __vector_table;
 #endif
 
-// some helpful macros for systick
 
-// the cc3200's fixed clock frequency of 80 MHz
-// note the use of ULL to indicate an unsigned long long constant
-#define SYSCLKFREQ 80000000ULL
-
-// macro to convert ticks to microseconds
-#define TICKS_TO_US(ticks) \
-    ((((ticks) / SYSCLKFREQ) * 1000000ULL) + \
-    ((((ticks) % SYSCLKFREQ) * 1000000ULL) / SYSCLKFREQ))\
-
-// macro to convert microseconds to ticks
-#define US_TO_TICKS(us) ((SYSCLKFREQ / 1000000ULL) * (us))
-
-// systick reload value set to 40ms period
-// (PERIOD_SEC) * (SYSCLKFREQ) = PERIOD_TICKS
-#define SYSTICK_RELOAD_VAL 3200000UL
 
 typedef struct {
     uint16_t code;
@@ -162,16 +132,12 @@ static const IRKeyEntry ir_key_table[] = {
 
 };
 
-// track systick counter periods elapsed
-// if it is not 0, we know the transmission ended
-volatile int systick_cnt = 0;
 
 extern void (* const g_pfnVectors[])(void);
 
-volatile unsigned long SW2_intcount;
-volatile unsigned long SW3_intcount;
-volatile unsigned char SW2_intflag;
-volatile unsigned char SW3_intflag;
+volatile unsigned long int current_char_timeout = 0;
+
+
 
 
 volatile uint8_t newValueSet = 0;
@@ -183,33 +149,18 @@ volatile unsigned int bufferData = 0x00;
 volatile uint8_t edgesDetected = 0;
 volatile int typing = 0;
 
-volatile unsigned long int current_char_timeout = 0;
 
 typedef struct PinSetting {
     unsigned long port;
     unsigned int pin;
 } PinSetting;
-
-static const PinSetting switch2 = { .port = GPIOA2_BASE, .pin = 0x40};
-static const PinSetting switch3 = { .port = GPIOA1_BASE, .pin = 0x20};
 static const PinSetting infared = { .port = GPIOA0_BASE, .pin = 0x1};
 //*****************************************************************************
 //                 GLOBAL VARIABLES -- End
 //*****************************************************************************
 
 
-//*****************************************************************************
-//
-//! Board Initialization & Configuration
-//!
-//! \param  None
-//!
-//! \return None
-//
-//*****************************************************************************
-
-const IRKeyEntry* ir_lookup(uint16_t code)
-{
+const IRKeyEntry* ir_lookup(uint16_t code) {
     int i;
     for (i = 0; i < sizeof(ir_key_table)/sizeof(ir_key_table[0]); i++) {
         if (ir_key_table[i].code == code) {
@@ -219,44 +170,8 @@ const IRKeyEntry* ir_lookup(uint16_t code)
     return NULL;
 }
 
-static inline void SysTickReset(void) {
-    // any write to the ST_CURRENT register clears it
-    // after clearing it automatically gets reset without
-    // triggering exception logic
-    // see reference manual section 3.2.1
-    HWREG(NVIC_ST_CURRENT) = 1;
 
-    // clear the global count variable
-    systick_cnt = 0;
-}
-
-static void SysTickHandler(void) {
-    // increment every time the systick handler fires
-    systick_cnt++;
-    if(typing && current_char_timeout < 100){
-        current_char_timeout++;
-    }
-}
-
-static void SysTickInit(void) {
-
-    // configure the reset value for the systick countdown register
-    MAP_SysTickPeriodSet(SYSTICK_RELOAD_VAL);
-
-    // register interrupts on the systick module
-    MAP_SysTickIntRegister(SysTickHandler);
-
-    // enable interrupts on systick
-    // (trigger SysTickHandler when countdown reaches 0)
-    MAP_SysTickIntEnable();
-
-    // enable the systick module itself
-    MAP_SysTickEnable();
-}
-
-static void
-BoardInit(void)
-{
+static void BoardInit(void) {
 
     MAP_IntVTableBaseSet((unsigned long)&g_pfnVectors[0]);
 
@@ -368,6 +283,58 @@ static void GPIOInfaredHandler(void) { //Pin 55 infared handler
 
 }
 
+typedef enum{
+    STATE_START,
+    STATE_START_MESSAGE,
+    STATE_INVALID_DELETE,
+    STATE_LOOP_CHAR,
+    STATE_NEW_CHAR,
+    STATE_DELETE,
+    STATE_DELETE_REPEAT
+} typeState;
+
+typeState transition(typeState current){
+    switch(current){
+    case STATE_START:
+        return STATE_LOOP_CHAR;
+    case STATE_START_MESSAGE:
+        if(currentCode == KEY_LAST){
+            return STATE_INVALID_DELETE;
+        }
+        return STATE_LOOP_CHAR;
+    case STATE_INVALID_DELETE:
+        return STATE_START_MESSAGE;
+    case STATE_LOOP_CHAR:
+        if(currentCode == KEY_LAST){
+            return STATE_DELETE;
+        }
+        if((lastCode != currentCode) || current_char_timeout > 20){
+            return STATE_NEW_CHAR;
+        }
+        return STATE_LOOP_CHAR;
+    case STATE_NEW_CHAR:
+        if(currentCode == KEY_LAST){
+            return STATE_DELETE;
+        }
+        if(currentCode == lastCode && current_char_timeout <= 20){
+            return STATE_LOOP_CHAR;
+        }
+        return STATE_NEW_CHAR;
+    case STATE_DELETE_REPEAT:
+        if(currentCode == KEY_LAST){
+            return STATE_DELETE_REPEAT;
+        }
+        return STATE_LOOP_CHAR;
+    case STATE_DELETE:
+        if(currentCode == KEY_LAST){
+            return STATE_DELETE_REPEAT;
+        }
+        return STATE_LOOP_CHAR;
+    }
+    return STATE_START;
+    // need an error state
+}
+
 void keyMappingTest(void) {
     fillScreen(BLACK);
     setTextSize(1);
@@ -375,69 +342,81 @@ void keyMappingTest(void) {
     setCursor(0,0);
     int x = 0;
     int y = 0;
-    char message[625];
-    memset(message, '\0',625);
-    int newChar = 1;
-    int newMessage = 1;
+    char curr =' ';
+
+    typeState currentState = STATE_START;
+
     while(1) {
         Report("checking if ValueSet ");
         while(!newValueSet) {}
-        int newChar = (lastCode == currentCode);
         const IRKeyEntry *key = ir_lookup(currentCode);
-        if(currentCode == KEY_ENTER) {
+        Report("Pressed (0x%X)\r\n", currentCode);
+        if(!key){
             return;
         }
-        if (key) {
-            typing = 1;
 
-            Report("Pressed %s (0x%X)\r\n", key->name, key->code);
-            if((!newChar || current_char_timeout > 20) && !newMessage){
-                x+=5;
-                typing = 0;
-                nextChar();
-                ++messageIndex;
-            }
-            newMessage = 0;
-            current_char_timeout = 0;
-            char curr = setChar(key->code);
-            if(curr == '\0'||messageIndex == 625){
-                Report("Sent %s\n",message);
-                memset(message,'\0',625);
-                messageIndex = 0;
-                newMessage = 1;
-            }
-            message[messageIndex] = curr;
-            cBuff[messageIndex]=curr;
+        currentState = transition(currentState);
+        if(key->code == KEY_ENTER){
+            return;
+        }
+
+        switch(currentState){
+        case STATE_START_MESSAGE:
             drawChar(x,y,curr,WHITE,BLACK,1);
-            if(x>=120){
+            cBuff[messageIndex] = curr;
+            ++messageIndex;
+            break;
+        case STATE_LOOP_CHAR:
+            typing = 1;
+            current_char_timeout = 0;
+            curr = setChar(key->code);
+            drawChar(x,y,curr,WHITE,BLACK,1);
+            cBuff[messageIndex] = curr;
+            break;
+        case STATE_DELETE:
+            typing = 0;
+            current_char_timeout = 0;
+            drawChar(x,y,' ',WHITE,BLACK,1);
+            --messageIndex;
+            break;
+        case STATE_NEW_CHAR:
+            typing = 1;
+            current_char_timeout = 0;
+            if(x < 120){
+                x+=5;
+            }else{
                 x=0;
                 y+=7;
             }
-        }
-        else {
-            Report("Pressed (0x%X)\r\n", currentCode);
+            nextChar();
+            curr = setChar(key->code);
+            drawChar(x,y,curr,WHITE,BLACK,1);
+            cBuff[messageIndex] = curr;
+            ++messageIndex;
+            break;
+        case STATE_DELETE_REPEAT:
+            typing = 0;
+            current_char_timeout = 0;
+            if(x!=0){
+                x-=5;
+                drawChar(x,y,' ',WHITE,BLACK,1);
+            }else{
+                x=120;
+                y-=7;
+                drawChar(x,y,' ',WHITE,BLACK,1);
+            }
+            --messageIndex;
+            break;
+        case STATE_INVALID_DELETE:
+            typing = 0;
+            current_char_timeout = 0;
+            break;
         }
         newValueSet = 0;
+
     }
 }
-
-//*****************************************************************************
-//
-//! Initialization
-//!
-//! This function
-//!        1. Configures the UART to be used.
-//!
-//! \return none
-//
-//*****************************************************************************
-
-
-
-
-
-void UARTISR(void)
-{
+void UARTISR(void) {
     unsigned long st = MAP_UARTIntStatus(UARTA1_BASE, true);
     MAP_UARTIntClear(UARTA1_BASE, st);
 
@@ -452,8 +431,7 @@ void UARTISR(void)
     }
 }
 
-void InitUartCommunication(void)
-{
+void InitUartCommunication(void) {
     MAP_UARTConfigSetExpClk(UARTA1_BASE,
         MAP_PRCMPeripheralClockGet(PRCM_UARTA1),
         UART_BAUD_RATE,
@@ -475,37 +453,16 @@ void InitUartCommunication(void)
     MAP_IntEnable(INT_UARTA1);
 }
 
-//*****************************************************************************
-//
-//! Main function for spi demo application
-//!
-//! \param none
-//!
-//! \return None.
-//
-//*****************************************************************************
+
 void main()
 {
     unsigned long ulStatus;
-    //
-    // Initialize Board configurations
-    //
+
     BoardInit();
 
-
-    //
-    // Muxing UART and SPI lines.
-    //
     PinMuxConfig();
 
-    //
-    // Reset SPI
-    //
     MAP_SPIReset(GSPI_BASE);
-
-    //
-    // Configure SPI interface
-    //
     MAP_SPIConfigSetExpClk(GSPI_BASE,MAP_PRCMPeripheralClockGet(PRCM_GSPI),
                      SPI_IF_BIT_RATE,
                      SPI_MODE_MASTER,
@@ -514,15 +471,10 @@ void main()
                      SPI_TURBO_OFF |
                      SPI_CS_ACTIVELOW |
                      SPI_WL_8));
-
     MAP_SPIFIFOEnable(GSPI_BASE, SPI_TX_FIFO);
-
-    //
-    // Enable SPI
-    //
     MAP_SPIEnable(GSPI_BASE);
 
-    // Enable SysTick
+
     SysTickInit();
 
 
@@ -538,22 +490,13 @@ void main()
     }
     InitUartCommunication();
 
-    //
-    // Initialising the Terminal.
-    //
-    InitTerm();
 
-    //
-    // Clearing the Terminal.
-    //
+    InitTerm();
     ClearTerm();
 
-    //
-    // Display the Banner
-    //
     Message("\n\n\n\r");
     Message("\t\t   ********************************************\n\r");
-    Message("\t\t        CC3200 SPI Demo Application  \n\r");
+    Message("\t\t        CC3200 Lab 3  \n\r");
     Message("\t\t   ********************************************\n\r");
     Message("\n\n\n\r");
 
@@ -562,35 +505,30 @@ void main()
 
 
     if(SENDER == 0) {
+        fillScreen(BLACK);
+        setTextSize(1);
+        setTextColor(WHITE, BLACK);
+        setCursor(0,0);
 
-                fillScreen(BLACK);
-                setTextSize(1);
-                setTextColor(WHITE, BLACK);
-                setCursor(0,0);
+        int x = 0;
+        int y = 0;
+        while (1) {
 
-                int x = 0;
-                int y = 0;
-                while (1) {
+            while (!newCharSet) {}
 
-                    while (!newCharSet) {}
+            while (rx_read < rx_write) {
+                char curr = cBuff[rx_read++];
+                x += 6;
+                drawChar(x, y, curr, WHITE, BLACK, 1);
+                if (x >= 120) { x = 0; y += 7; }
+            }
 
-
-                    while (rx_read < rx_write) {
-                        char curr = cBuff[rx_read++];
-
-                        x += 6;
-                        drawChar(x, y, curr, WHITE, BLACK, 1);
-                        if (x >= 120) { x = 0; y += 7; }
-                    }
-
-
-
-                    MAP_IntMasterDisable();
-                    if (rx_read >= rx_write) {
-                        newCharSet = 0;
-                    }
-                    MAP_IntMasterEnable();
-                }
+            MAP_IntMasterDisable();
+            if (rx_read >= rx_write) {
+                newCharSet = 0;
+             }
+            MAP_IntMasterEnable();
+        }
      }
      else {
          keyMappingTest();
@@ -600,5 +538,5 @@ void main()
              UARTCharPut(UARTA1_BASE,cBuff[index]);
              index++;
          }
-        }
+     }
 }

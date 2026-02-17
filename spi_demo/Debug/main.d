@@ -36,6 +36,7 @@ main.obj: C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/systick.h
 main.obj: ../typing.h
 main.obj: C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/uart_if.h
 main.obj: ../pin_mux_config.h
+main.obj: ../systick_utils.h
 
 ../main.c:
 
@@ -108,4 +109,6 @@ C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/systick.h:
 C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/uart_if.h:
 
 ../pin_mux_config.h:
+
+../systick_utils.h:
 

@@ -16,6 +16,7 @@ ORDERED_OBJS += \
 "./oled_test.obj" \
 "./pin_mux_config.obj" \
 "./startup_ccs.obj" \
+"./systick_utils.obj" \
 "./typing.obj" \
 "./uart_if.obj" \
 "../cc3200v1p32.cmd" \
@@ -150,8 +151,8 @@ spi_demo.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 # Other Targets
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)
-	-$(RM) "Adafruit_GFX.obj" "Adafruit_SSD1351.obj" "main.obj" "oled_test.obj" "pin_mux_config.obj" "startup_ccs.obj" "typing.obj" "uart_if.obj" 
-	-$(RM) "Adafruit_GFX.d" "Adafruit_SSD1351.d" "main.d" "oled_test.d" "pin_mux_config.d" "startup_ccs.d" "typing.d" "uart_if.d" 
+	-$(RM) "Adafruit_GFX.obj" "Adafruit_SSD1351.obj" "main.obj" "oled_test.obj" "pin_mux_config.obj" "startup_ccs.obj" "systick_utils.obj" "typing.obj" "uart_if.obj" 
+	-$(RM) "Adafruit_GFX.d" "Adafruit_SSD1351.d" "main.d" "oled_test.d" "pin_mux_config.d" "startup_ccs.d" "systick_utils.d" "typing.d" "uart_if.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 
