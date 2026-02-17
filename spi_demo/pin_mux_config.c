@@ -62,8 +62,6 @@ void PinMuxConfig(void)
     PinModeSet(PIN_03, PIN_MODE_0);
     PinModeSet(PIN_21, PIN_MODE_0);
     PinModeSet(PIN_52, PIN_MODE_0);
-    PinModeSet(PIN_58, PIN_MODE_0);
-    PinModeSet(PIN_59, PIN_MODE_0);
     PinModeSet(PIN_60, PIN_MODE_0);
     PinModeSet(PIN_62, PIN_MODE_0);
     PinModeSet(PIN_63, PIN_MODE_0);

@@ -108,6 +108,8 @@ volatile uint8_t delta_log_full = 0;
 
 int messageIndex = 0;
 volatile char cBuff[625];
+volatile int rx_write = 0;
+volatile int rx_read  = 0;
 volatile int charIndex = 0;
 volatile uint8_t newCharSet = 0;
 
@@ -432,28 +434,45 @@ void keyMappingTest(void) {
 
 
 
-void InitUartCommunication() {
 
-    MAP_UARTConfigSetExpClk(UARTA1_BASE,MAP_PRCMPeripheralClockGet(PRCM_UARTA1),
-                      UART_BAUD_RATE, (UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE |
-                       UART_CONFIG_PAR_NONE));
+
+void UARTISR(void)
+{
+    unsigned long st = MAP_UARTIntStatus(UARTA1_BASE, true);
+    MAP_UARTIntClear(UARTA1_BASE, st);
+
+    while (MAP_UARTCharsAvail(UARTA1_BASE)) {
+        int ch = MAP_UARTCharGetNonBlocking(UARTA1_BASE);
+        if (ch == -1) break;
+
+        if (rx_write < (int)sizeof(cBuff)) {
+            cBuff[rx_write++] = (char)ch;
+            newCharSet = 1;
+        }
+    }
+}
+
+void InitUartCommunication(void)
+{
+    MAP_UARTConfigSetExpClk(UARTA1_BASE,
+        MAP_PRCMPeripheralClockGet(PRCM_UARTA1),
+        UART_BAUD_RATE,
+        (UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE | UART_CONFIG_PAR_NONE));
 
     MAP_UARTFIFOEnable(UARTA1_BASE);
 
-    UARTIntEnable(UARTA1_BASE,UART_INT_RX);
-}
+    // REGISTER ISR FIRST
+    MAP_UARTIntRegister(UARTA1_BASE, UARTISR);
 
-void UARTISR(void) {
-    unsigned long ulstatus;
+    // Clear any pending UART interrupts
+    unsigned long st = MAP_UARTIntStatus(UARTA1_BASE, true);
+    MAP_UARTIntClear(UARTA1_BASE, st);
 
-    ulstatus =  MAP_UARTIntStatus(UARTA1_BASE, true);
-    MAP_UARTIntClear(UARTA1_BASE, ulstatus);
+    // Enable UART RX + RX timeout interrupts
+    MAP_UARTIntEnable(UARTA1_BASE, UART_INT_RX | UART_INT_RT);
 
-    char receivedCharacter = MAP_UARTCharGet(UARTA1_BASE);
 
-    charIndex++;
-    cBuff[charIndex] = receivedCharacter;
-    newCharSet = 1;
+    MAP_IntEnable(INT_UARTA1);
 }
 
 //*****************************************************************************
@@ -540,46 +559,46 @@ void main()
 
     Adafruit_Init();
 
+
+
     if(SENDER == 0) {
-                //Register the ISR function
-                MAP_UARTIntRegister(UARTA1_BASE,UARTISR);
-                ulStatus = MAP_UARTIntStatus(UARTA1_BASE, false);
-                MAP_GPIOIntClear(UARTA1_BASE, ulStatus);
+
                 fillScreen(BLACK);
                 setTextSize(1);
                 setTextColor(WHITE, BLACK);
                 setCursor(0,0);
+
                 int x = 0;
                 int y = 0;
-                 while(1) {
+                while (1) {
 
-                                while(!newCharSet){}
-                                    newCharSet = 0;
-                                    x+=5;
-                                    char curr = cBuff[charIndex - 1];
-                                    drawChar(x,y,curr,WHITE,BLACK,1);
-                                    if(x>=120){
-                                        x=0;
-                                        y+=7;
-                                    }
+                    while (!newCharSet) {}
 
+
+                    while (rx_read < rx_write) {
+                        char curr = cBuff[rx_read++];
+
+                        x += 6;
+                        drawChar(x, y, curr, WHITE, BLACK, 1);
+                        if (x >= 120) { x = 0; y += 7; }
                     }
 
 
 
+                    MAP_IntMasterDisable();
+                    if (rx_read >= rx_write) {
+                        newCharSet = 0;
+                    }
+                    MAP_IntMasterEnable();
+                }
      }
      else {
          keyMappingTest();
          int index = 0;
 
-         while(index < messageIndex) {
+         while(index <= messageIndex) {
              UARTCharPut(UARTA1_BASE,cBuff[index]);
              index++;
          }
-
-
         }
-
-
-
 }
