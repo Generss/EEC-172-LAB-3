@@ -1,2 +1,3 @@
-2026/01/14-14:56:20.906 2240 Creating DB C:\Users\Josh\Desktop\EEC 172\labs\lab2_part1\.jxbrowser.userdata\Default\GCM Store\Encryption since it was missing.
-2026/01/14-14:56:20.913 2240 Reusing MANIFEST C:\Users\Josh\Desktop\EEC 172\labs\lab2_part1\.jxbrowser.userdata\Default\GCM Store\Encryption/MANIFEST-000001
+2026/02/17-15:12:23.394 3258 Reusing MANIFEST C:\Users\Josh\Desktop\EEC 172\labs\lab3_part1\.jxbrowser.userdata\Default\GCM Store\Encryption/MANIFEST-000001
+2026/02/17-15:12:23.394 3258 Recovering log #3
+2026/02/17-15:12:23.395 3258 Reusing old log C:\Users\Josh\Desktop\EEC 172\labs\lab3_part1\.jxbrowser.userdata\Default\GCM Store\Encryption/000003.log 

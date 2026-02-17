@@ -9,11 +9,11 @@ Invoking: Arm Compiler
 "../main.c", line 340: warning #225-D: function "setTextSize" declared implicitly
 "../main.c", line 341: warning #225-D: function "setTextColor" declared implicitly
 "../main.c", line 342: warning #225-D: function "setCursor" declared implicitly
-"../main.c", line 365: warning #225-D: function "drawChar" declared implicitly
-"../main.c", line 509: warning #225-D: function "setTextSize" declared implicitly
-"../main.c", line 510: warning #225-D: function "setTextColor" declared implicitly
-"../main.c", line 511: warning #225-D: function "setCursor" declared implicitly
-"../main.c", line 522: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 371: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 515: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 516: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 517: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 528: warning #225-D: function "drawChar" declared implicitly
 Finished building: "../main.c"
  
 Building target: "spi_demo.out"

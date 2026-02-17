@@ -1,7 +1,7 @@
 #define __unsigned_chars__ 1	/* Predefined */
 #define __PRAGMA_REDEFINE_EXTNAME 1	/* Predefined */
-#define __DATE__ "Feb  6 2026"	/* Predefined */
-#define __TIME__ "02:12:06"	/* Predefined */
+#define __DATE__ "Feb 17 2026"	/* Predefined */
+#define __TIME__ "15:15:26"	/* Predefined */
 #define __STDC__ 1	/* Predefined */
 #define __STDC_HOSTED__ 1	/* Predefined */
 #define __cplusplus 201402L	/* Predefined */

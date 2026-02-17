@@ -88,7 +88,7 @@
 
 #define SPI_IF_BIT_RATE  100000
 
-#define SENDER 1
+#define SENDER 0
 
 
 //*****************************************************************************
@@ -357,6 +357,12 @@ void keyMappingTest(void) {
 
         currentState = transition(currentState);
         if(key->code == KEY_ENTER){
+            while(x!=114){
+                x+=6;
+                ++messageIndex;
+                cBuff[messageIndex] = ' ';
+            }
+            newValueSet = 0;
             return;
         }
 
@@ -383,26 +389,26 @@ void keyMappingTest(void) {
             typing = 1;
             current_char_timeout = 0;
             if(x < 120){
-                x+=5;
+                x+=6;
             }else{
                 x=0;
-                y+=7;
+                y+=8;
             }
             nextChar();
             curr = setChar(key->code);
             drawChar(x,y,curr,WHITE,BLACK,1);
-            cBuff[messageIndex] = curr;
             ++messageIndex;
+            cBuff[messageIndex] = curr;
             break;
         case STATE_DELETE_REPEAT:
             typing = 0;
             current_char_timeout = 0;
             if(x!=0){
-                x-=5;
+                x-=6;
                 drawChar(x,y,' ',WHITE,BLACK,1);
             }else{
                 x=120;
-                y-=7;
+                y-=8;
                 drawChar(x,y,' ',WHITE,BLACK,1);
             }
             --messageIndex;
@@ -531,12 +537,15 @@ void main()
         }
      }
      else {
-         keyMappingTest();
-         int index = 0;
+         while(1){
+             keyMappingTest();
+             int index = 0;
 
-         while(index <= messageIndex) {
-             UARTCharPut(UARTA1_BASE,cBuff[index]);
-             index++;
+             while(index <= messageIndex) {
+                 UARTCharPut(UARTA1_BASE,cBuff[index]);
+                 index++;
+             }
+             messageIndex = 0;
          }
      }
 }
