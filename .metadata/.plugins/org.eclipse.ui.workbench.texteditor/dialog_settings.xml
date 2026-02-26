@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="newChar"/>
+		<item key="selection" value="ISR"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="ISR"/>
+			<item value="rate"/>
+			<item value="SENDER"/>
+			<item value="misses"/>
+			<item value="numLetters"/>
+			<item value="reveal"/>
+			<item value="Fail"/>
+			<item value="rx_read"/>
+			<item value="num_letters="/>
+			<item value="num_letters ="/>
+			<item value="num_letters = 5"/>
 			<item value="newChar"/>
 			<item value="current_char"/>
 			<item value="current"/>
 			<item value="DELTA_LOG_SIZE"/>
-			<item value="TR_BUFF_SIZE"/>
-			<item value="SPI_IF_BIT_RATE"/>
-			<item value="delta_log"/>
-			<item value="typing"/>
-			<item value="ir_lookup"/>
-			<item value="messageIndex"/>
-			<item value="index"/>
-			<item value="MASTER_MODE"/>
-			<item value="SENDER"/>
-			<item value="&apos;a&apos;"/>
-			<item value="cBuff"/>
 		</list>
 		<list key="replacehistory">
 		</list>

@@ -9,11 +9,20 @@ Invoking: Arm Compiler
 "../main.c", line 340: warning #225-D: function "setTextSize" declared implicitly
 "../main.c", line 341: warning #225-D: function "setTextColor" declared implicitly
 "../main.c", line 342: warning #225-D: function "setCursor" declared implicitly
-"../main.c", line 371: warning #225-D: function "drawChar" declared implicitly
-"../main.c", line 515: warning #225-D: function "setTextSize" declared implicitly
-"../main.c", line 516: warning #225-D: function "setTextColor" declared implicitly
-"../main.c", line 517: warning #225-D: function "setCursor" declared implicitly
-"../main.c", line 528: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 367: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 466: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 471: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 474: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 527: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 528: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 529: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 558: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 578: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 724: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 725: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 726: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 728: warning #179-D: variable "x" was declared but never referenced
+"../main.c", line 729: warning #179-D: variable "y" was declared but never referenced
 Finished building: "../main.c"
  
 Building target: "spi_demo.out"

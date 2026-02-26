@@ -5824,3 +5824,1617 @@ C:/ti/ccs1250/ccs/utils/tiobj2bin/tiobj2bin spi_demo.out spi_demo.bin C:/ti/ccs1
  
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'spi_demo.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/Josh/Desktop/EEC 172/labs/lab3_part1/spi_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 340: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 341: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 342: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 371: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 465: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 466: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 467: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 478: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 490: error #171: expected a declaration
+"../main.c", line 527: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 530: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 530: error #148: declaration is incompatible with "void InitTerm(void)" (declared at line 77 of "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/uart_if.h")
+"../main.c", line 531: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 531: error #148: declaration is incompatible with "void ClearTerm(void)" (declared at line 78 of "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/uart_if.h")
+"../main.c", line 533: error #80: expected a type specifier
+"../main.c", line 533: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 533: error #148: declaration is incompatible with "void Message(const char *)" (declared at line 79 of "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/uart_if.h")
+"../main.c", line 534: error #80: expected a type specifier
+"../main.c", line 534: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 535: error #80: expected a type specifier
+"../main.c", line 535: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 536: error #80: expected a type specifier
+"../main.c", line 536: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 537: error #80: expected a type specifier
+"../main.c", line 537: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 539: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 539: error #148: declaration is incompatible with "void Adafruit_Init(void)" (declared at line 95 of "..\Adafruit_SSD1351.h")
+"../main.c", line 543: error #171: expected a declaration
+"../main.c", line 564: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 565: error #171: expected a declaration
+"../main.c", line 567: error #171: expected a declaration
+At end of source: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 174: warning #179-D: function "BoardInit" was declared but never referenced
+"../main.c", line 211: warning #179-D: function "GPIOInfaredHandler" was declared but never referenced
+13 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/Josh/Desktop/EEC 172/labs/lab3_part1/spi_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 340: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 341: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 342: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 371: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 517: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 518: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 519: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 530: warning #225-D: function "drawChar" declared implicitly
+Finished building: "../main.c"
+ 
+Building target: "spi_demo.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"spi_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="spi_demo_linkInfo.xml" --rom_model -o "spi_demo.out" "./Adafruit_GFX.obj" "./Adafruit_SSD1351.obj" "./main.obj" "./oled_test.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./systick_utils.obj" "./typing.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "spi_demo.out"
+ 
+C:/ti/ccs1250/ccs/utils/tiobj2bin/tiobj2bin spi_demo.out spi_demo.bin C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armofd C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armhex C:/ti/ccs1250/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/Josh/Desktop/EEC 172/labs/lab3_part1/spi_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 340: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 341: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 342: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 371: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 469: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 473: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 486: error #66: expected a ";"
+"../main.c", line 496: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 510: error #66: expected a ";"
+"../main.c", line 520: error #126: expected a "("
+"../main.c", line 541: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 541: error #29: expected an expression
+"../main.c", line 546: error #117: a break statement may only be used within a loop or switch
+"../main.c", line 547: error #122: a case label may only be used within a switch
+"../main.c", line 555: error #20: identifier "word" is undefined
+"../main.c", line 555: error #20: identifier "numLetters" is undefined
+"../main.c", line 557: error #117: a break statement may only be used within a loop or switch
+"../main.c", line 558: error #122: a case label may only be used within a switch
+"../main.c", line 561: error #66: expected a ";"
+"../main.c", line 564: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 569: error #117: a break statement may only be used within a loop or switch
+"../main.c", line 570: error #122: a case label may only be used within a switch
+"../main.c", line 571: error #1148: a declaration cannot have a label
+"../main.c", line 574: error #128: expected a statement
+"../main.c", line 582: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 583: error #122: a case label may only be used within a switch
+"../main.c", line 585: error #20: identifier "victory" is undefined
+"../main.c", line 587: error #117: a break statement may only be used within a loop or switch
+"../main.c", line 589: error #122: a case label may only be used within a switch
+"../main.c", line 591: error #20: identifier "failure" is undefined
+"../main.c", line 593: error #117: a break statement may only be used within a loop or switch
+"../main.c", line 595: error #122: a case label may only be used within a switch
+"../main.c", line 596: error #117: a break statement may only be used within a loop or switch
+"../main.c", line 571: warning #552-D: variable "status" was set but never used
+"../main.c", line 605: error #171: expected a declaration
+"../main.c", line 642: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 645: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 645: error #148: declaration is incompatible with "void InitTerm(void)" (declared at line 77 of "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/uart_if.h")
+"../main.c", line 646: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 646: error #148: declaration is incompatible with "void ClearTerm(void)" (declared at line 78 of "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/uart_if.h")
+"../main.c", line 648: error #80: expected a type specifier
+"../main.c", line 648: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 648: error #148: declaration is incompatible with "void Message(const char *)" (declared at line 79 of "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/uart_if.h")
+"../main.c", line 649: error #80: expected a type specifier
+"../main.c", line 649: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 650: error #80: expected a type specifier
+"../main.c", line 650: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 651: error #80: expected a type specifier
+"../main.c", line 651: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 652: error #80: expected a type specifier
+"../main.c", line 652: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 654: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 654: error #148: declaration is incompatible with "void Adafruit_Init(void)" (declared at line 95 of "..\Adafruit_SSD1351.h")
+"../main.c", line 658: error #171: expected a declaration
+At end of source: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 174: warning #179-D: function "BoardInit" was declared but never referenced
+"../main.c", line 211: warning #179-D: function "GPIOInfaredHandler" was declared but never referenced
+34 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/Josh/Desktop/EEC 172/labs/lab3_part1/spi_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 340: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 341: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 342: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 371: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 469: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 473: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 486: error #66: expected a ";"
+"../main.c", line 496: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 520: error #126: expected a "("
+"../main.c", line 541: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 541: error #29: expected an expression
+"../main.c", line 546: error #117: a break statement may only be used within a loop or switch
+"../main.c", line 547: error #122: a case label may only be used within a switch
+"../main.c", line 555: error #20: identifier "word" is undefined
+"../main.c", line 557: error #117: a break statement may only be used within a loop or switch
+"../main.c", line 558: error #122: a case label may only be used within a switch
+"../main.c", line 561: error #66: expected a ";"
+"../main.c", line 564: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 569: error #117: a break statement may only be used within a loop or switch
+"../main.c", line 570: error #122: a case label may only be used within a switch
+"../main.c", line 571: error #1148: a declaration cannot have a label
+"../main.c", line 574: error #128: expected a statement
+"../main.c", line 582: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 583: error #122: a case label may only be used within a switch
+"../main.c", line 585: error #20: identifier "victory" is undefined
+"../main.c", line 587: error #117: a break statement may only be used within a loop or switch
+"../main.c", line 589: error #122: a case label may only be used within a switch
+"../main.c", line 591: error #20: identifier "failure" is undefined
+"../main.c", line 593: error #117: a break statement may only be used within a loop or switch
+"../main.c", line 595: error #122: a case label may only be used within a switch
+"../main.c", line 596: error #117: a break statement may only be used within a loop or switch
+"../main.c", line 571: warning #552-D: variable "status" was set but never used
+"../main.c", line 605: error #171: expected a declaration
+"../main.c", line 642: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 645: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 645: error #148: declaration is incompatible with "void InitTerm(void)" (declared at line 77 of "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/uart_if.h")
+"../main.c", line 646: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 646: error #148: declaration is incompatible with "void ClearTerm(void)" (declared at line 78 of "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/uart_if.h")
+"../main.c", line 648: error #80: expected a type specifier
+"../main.c", line 648: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 648: error #148: declaration is incompatible with "void Message(const char *)" (declared at line 79 of "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/uart_if.h")
+"../main.c", line 649: error #80: expected a type specifier
+"../main.c", line 649: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 650: error #80: expected a type specifier
+"../main.c", line 650: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 651: error #80: expected a type specifier
+"../main.c", line 651: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 652: error #80: expected a type specifier
+"../main.c", line 652: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 654: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 654: error #148: declaration is incompatible with "void Adafruit_Init(void)" (declared at line 95 of "..\Adafruit_SSD1351.h")
+"../main.c", line 658: error #171: expected a declaration
+At end of source: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 174: warning #179-D: function "BoardInit" was declared but never referenced
+"../main.c", line 211: warning #179-D: function "GPIOInfaredHandler" was declared but never referenced
+32 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/Josh/Desktop/EEC 172/labs/lab3_part1/spi_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 340: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 341: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 342: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 371: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 469: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 473: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 520: error #126: expected a "("
+"../main.c", line 541: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 541: error #29: expected an expression
+"../main.c", line 546: error #117: a break statement may only be used within a loop or switch
+"../main.c", line 547: error #122: a case label may only be used within a switch
+"../main.c", line 555: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 557: error #117: a break statement may only be used within a loop or switch
+"../main.c", line 558: error #122: a case label may only be used within a switch
+"../main.c", line 561: error #66: expected a ";"
+"../main.c", line 564: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 569: error #117: a break statement may only be used within a loop or switch
+"../main.c", line 570: error #122: a case label may only be used within a switch
+"../main.c", line 571: error #1148: a declaration cannot have a label
+"../main.c", line 572: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 574: error #128: expected a statement
+"../main.c", line 582: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 583: error #122: a case label may only be used within a switch
+"../main.c", line 587: error #117: a break statement may only be used within a loop or switch
+"../main.c", line 589: error #122: a case label may only be used within a switch
+"../main.c", line 593: error #117: a break statement may only be used within a loop or switch
+"../main.c", line 595: error #122: a case label may only be used within a switch
+"../main.c", line 596: error #117: a break statement may only be used within a loop or switch
+"../main.c", line 571: warning #552-D: variable "status" was set but never used
+"../main.c", line 605: error #171: expected a declaration
+"../main.c", line 642: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 645: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 645: error #148: declaration is incompatible with "void InitTerm(void)" (declared at line 77 of "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/uart_if.h")
+"../main.c", line 646: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 646: error #148: declaration is incompatible with "void ClearTerm(void)" (declared at line 78 of "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/uart_if.h")
+"../main.c", line 648: error #80: expected a type specifier
+"../main.c", line 648: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 648: error #148: declaration is incompatible with "void Message(const char *)" (declared at line 79 of "C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/uart_if.h")
+"../main.c", line 649: error #80: expected a type specifier
+"../main.c", line 649: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 650: error #80: expected a type specifier
+"../main.c", line 650: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 651: error #80: expected a type specifier
+"../main.c", line 651: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 652: error #80: expected a type specifier
+"../main.c", line 652: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 654: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 654: error #148: declaration is incompatible with "void Adafruit_Init(void)" (declared at line 95 of "..\Adafruit_SSD1351.h")
+"../main.c", line 658: error #171: expected a declaration
+At end of source: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 174: warning #179-D: function "BoardInit" was declared but never referenced
+"../main.c", line 211: warning #179-D: function "GPIOInfaredHandler" was declared but never referenced
+28 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/Josh/Desktop/EEC 172/labs/lab3_part1/spi_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 340: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 341: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 342: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 371: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 469: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 473: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 524: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 525: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 526: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 536: error #20: identifier "x_read" is undefined
+"../main.c", line 555: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 561: error #66: expected a ";"
+"../main.c", line 564: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 571: error #1148: a declaration cannot have a label
+"../main.c", line 572: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 574: error #128: expected a statement
+"../main.c", line 582: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 571: warning #552-D: variable "status" was set but never used
+"../main.c", line 660: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 661: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 662: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 686: error #128: expected a statement
+"../main.c", line 698: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 664: warning #179-D: variable "x" was declared but never referenced
+"../main.c", line 665: warning #179-D: variable "y" was declared but never referenced
+At end of source: error #68: expected a "}"
+6 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/Josh/Desktop/EEC 172/labs/lab3_part1/spi_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 340: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 341: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 342: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 371: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 469: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 473: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 524: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 525: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 526: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 555: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 561: error #66: expected a ";"
+"../main.c", line 564: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 571: error #1148: a declaration cannot have a label
+"../main.c", line 572: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 574: error #128: expected a statement
+"../main.c", line 582: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 571: warning #552-D: variable "status" was set but never used
+"../main.c", line 660: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 661: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 662: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 686: error #128: expected a statement
+"../main.c", line 698: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 664: warning #179-D: variable "x" was declared but never referenced
+"../main.c", line 665: warning #179-D: variable "y" was declared but never referenced
+At end of source: error #68: expected a "}"
+5 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/Josh/Desktop/EEC 172/labs/lab3_part1/spi_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 340: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 341: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 342: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 371: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 469: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 473: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 524: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 525: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 526: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 555: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 571: error #1148: a declaration cannot have a label
+"../main.c", line 572: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 574: error #128: expected a statement
+"../main.c", line 582: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 571: warning #552-D: variable "status" was set but never used
+"../main.c", line 660: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 661: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 662: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 686: error #128: expected a statement
+"../main.c", line 698: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 664: warning #179-D: variable "x" was declared but never referenced
+"../main.c", line 665: warning #179-D: variable "y" was declared but never referenced
+At end of source: error #68: expected a "}"
+4 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/Josh/Desktop/EEC 172/labs/lab3_part1/spi_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 340: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 341: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 342: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 371: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 469: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 473: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 525: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 526: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 527: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 556: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 572: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 660: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 661: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 662: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 686: error #128: expected a statement
+"../main.c", line 698: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 664: warning #179-D: variable "x" was declared but never referenced
+"../main.c", line 665: warning #179-D: variable "y" was declared but never referenced
+At end of source: error #68: expected a "}"
+2 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/Josh/Desktop/EEC 172/labs/lab3_part1/spi_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 340: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 341: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 342: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 371: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 469: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 473: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 525: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 526: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 527: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 556: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 572: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 660: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 661: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 662: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 664: warning #179-D: variable "x" was declared but never referenced
+"../main.c", line 665: warning #179-D: variable "y" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "spi_demo.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"spi_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="spi_demo_linkInfo.xml" --rom_model -o "spi_demo.out" "./Adafruit_GFX.obj" "./Adafruit_SSD1351.obj" "./main.obj" "./oled_test.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./systick_utils.obj" "./typing.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "spi_demo.out"
+ 
+C:/ti/ccs1250/ccs/utils/tiobj2bin/tiobj2bin spi_demo.out spi_demo.bin C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armofd C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armhex C:/ti/ccs1250/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'spi_demo.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/Josh/Desktop/EEC 172/labs/lab3_part1/spi_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 340: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 341: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 342: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 371: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 469: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 473: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 525: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 526: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 527: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 539: warning #112-D: statement is unreachable
+"../main.c", line 557: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 573: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 661: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 662: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 663: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 665: warning #179-D: variable "x" was declared but never referenced
+"../main.c", line 666: warning #179-D: variable "y" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "spi_demo.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"spi_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="spi_demo_linkInfo.xml" --rom_model -o "spi_demo.out" "./Adafruit_GFX.obj" "./Adafruit_SSD1351.obj" "./main.obj" "./oled_test.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./systick_utils.obj" "./typing.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "spi_demo.out"
+ 
+C:/ti/ccs1250/ccs/utils/tiobj2bin/tiobj2bin spi_demo.out spi_demo.bin C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armofd C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armhex C:/ti/ccs1250/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/Josh/Desktop/EEC 172/labs/lab3_part1/spi_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 340: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 341: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 342: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 371: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 469: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 473: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 525: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 526: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 527: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 539: warning #112-D: statement is unreachable
+"../main.c", line 557: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 573: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 661: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 662: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 663: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 665: warning #179-D: variable "x" was declared but never referenced
+"../main.c", line 666: warning #179-D: variable "y" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "spi_demo.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"spi_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="spi_demo_linkInfo.xml" --rom_model -o "spi_demo.out" "./Adafruit_GFX.obj" "./Adafruit_SSD1351.obj" "./main.obj" "./oled_test.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./systick_utils.obj" "./typing.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "spi_demo.out"
+ 
+C:/ti/ccs1250/ccs/utils/tiobj2bin/tiobj2bin spi_demo.out spi_demo.bin C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armofd C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armhex C:/ti/ccs1250/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/Josh/Desktop/EEC 172/labs/lab3_part1/spi_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 340: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 341: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 342: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 371: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 469: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 473: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 526: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 527: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 528: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 540: warning #112-D: statement is unreachable
+"../main.c", line 558: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 574: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 662: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 663: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 664: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 666: warning #179-D: variable "x" was declared but never referenced
+"../main.c", line 667: warning #179-D: variable "y" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "spi_demo.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"spi_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="spi_demo_linkInfo.xml" --rom_model -o "spi_demo.out" "./Adafruit_GFX.obj" "./Adafruit_SSD1351.obj" "./main.obj" "./oled_test.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./systick_utils.obj" "./typing.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "spi_demo.out"
+ 
+C:/ti/ccs1250/ccs/utils/tiobj2bin/tiobj2bin spi_demo.out spi_demo.bin C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armofd C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armhex C:/ti/ccs1250/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/Josh/Desktop/EEC 172/labs/lab3_part1/spi_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 340: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 341: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 342: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 371: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 469: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 473: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 526: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 527: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 528: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 540: warning #112-D: statement is unreachable
+"../main.c", line 558: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 574: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 664: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 665: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 666: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 668: warning #179-D: variable "x" was declared but never referenced
+"../main.c", line 669: warning #179-D: variable "y" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "spi_demo.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"spi_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="spi_demo_linkInfo.xml" --rom_model -o "spi_demo.out" "./Adafruit_GFX.obj" "./Adafruit_SSD1351.obj" "./main.obj" "./oled_test.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./systick_utils.obj" "./typing.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "spi_demo.out"
+ 
+C:/ti/ccs1250/ccs/utils/tiobj2bin/tiobj2bin spi_demo.out spi_demo.bin C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armofd C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armhex C:/ti/ccs1250/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'spi_demo.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'spi_demo.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'spi_demo.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/Josh/Desktop/EEC 172/labs/lab3_part1/spi_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 340: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 341: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 342: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 371: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 469: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 473: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 526: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 527: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 528: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 540: warning #112-D: statement is unreachable
+"../main.c", line 558: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 574: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 665: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 666: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 667: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 669: warning #179-D: variable "x" was declared but never referenced
+"../main.c", line 670: warning #179-D: variable "y" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "spi_demo.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"spi_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="spi_demo_linkInfo.xml" --rom_model -o "spi_demo.out" "./Adafruit_GFX.obj" "./Adafruit_SSD1351.obj" "./main.obj" "./oled_test.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./systick_utils.obj" "./typing.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "spi_demo.out"
+ 
+C:/ti/ccs1250/ccs/utils/tiobj2bin/tiobj2bin spi_demo.out spi_demo.bin C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armofd C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armhex C:/ti/ccs1250/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/Josh/Desktop/EEC 172/labs/lab3_part1/spi_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 340: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 341: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 342: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 371: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 470: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 475: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 478: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 531: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 532: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 533: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 545: warning #112-D: statement is unreachable
+"../main.c", line 563: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 579: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 670: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 671: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 672: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 674: warning #179-D: variable "x" was declared but never referenced
+"../main.c", line 675: warning #179-D: variable "y" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "spi_demo.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"spi_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="spi_demo_linkInfo.xml" --rom_model -o "spi_demo.out" "./Adafruit_GFX.obj" "./Adafruit_SSD1351.obj" "./main.obj" "./oled_test.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./systick_utils.obj" "./typing.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "spi_demo.out"
+ 
+C:/ti/ccs1250/ccs/utils/tiobj2bin/tiobj2bin spi_demo.out spi_demo.bin C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armofd C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armhex C:/ti/ccs1250/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'spi_demo.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/Josh/Desktop/EEC 172/labs/lab3_part1/spi_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 340: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 341: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 342: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 371: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 470: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 475: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 478: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 482: error #66: expected a ";"
+"../main.c", line 532: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 533: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 534: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 546: warning #112-D: statement is unreachable
+"../main.c", line 564: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 580: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 671: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 672: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 673: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 675: warning #179-D: variable "x" was declared but never referenced
+"../main.c", line 676: warning #179-D: variable "y" was declared but never referenced
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/Josh/Desktop/EEC 172/labs/lab3_part1/spi_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 340: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 341: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 342: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 371: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 470: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 475: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 478: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 532: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 533: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 534: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 546: warning #112-D: statement is unreachable
+"../main.c", line 564: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 580: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 671: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 672: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 673: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 675: warning #179-D: variable "x" was declared but never referenced
+"../main.c", line 676: warning #179-D: variable "y" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "spi_demo.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"spi_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="spi_demo_linkInfo.xml" --rom_model -o "spi_demo.out" "./Adafruit_GFX.obj" "./Adafruit_SSD1351.obj" "./main.obj" "./oled_test.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./systick_utils.obj" "./typing.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "spi_demo.out"
+ 
+C:/ti/ccs1250/ccs/utils/tiobj2bin/tiobj2bin spi_demo.out spi_demo.bin C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armofd C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armhex C:/ti/ccs1250/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'spi_demo.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'spi_demo.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'spi_demo.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'spi_demo.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'spi_demo.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/Josh/Desktop/EEC 172/labs/lab3_part1/spi_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 340: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 341: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 342: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 371: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 470: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 475: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 478: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 532: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 533: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 534: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 546: warning #112-D: statement is unreachable
+"../main.c", line 564: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 580: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 598: error #66: expected a ";"
+"../main.c", line 605: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 606: warning #112-D: statement is unreachable
+"../main.c", line 607: error #66: expected a ";"
+"../main.c", line 614: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 615: warning #112-D: statement is unreachable
+"../main.c", line 625: error #66: expected a ";"
+"../main.c", line 632: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 633: warning #112-D: statement is unreachable
+"../main.c", line 634: error #66: expected a ";"
+"../main.c", line 641: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 642: warning #112-D: statement is unreachable
+"../main.c", line 731: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 732: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 733: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 735: warning #179-D: variable "x" was declared but never referenced
+"../main.c", line 736: warning #179-D: variable "y" was declared but never referenced
+4 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/Josh/Desktop/EEC 172/labs/lab3_part1/spi_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 340: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 341: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 342: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 371: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 470: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 475: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 478: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 532: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 533: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 534: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 546: warning #112-D: statement is unreachable
+"../main.c", line 564: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 580: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 731: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 732: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 733: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 735: warning #179-D: variable "x" was declared but never referenced
+"../main.c", line 736: warning #179-D: variable "y" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "spi_demo.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"spi_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="spi_demo_linkInfo.xml" --rom_model -o "spi_demo.out" "./Adafruit_GFX.obj" "./Adafruit_SSD1351.obj" "./main.obj" "./oled_test.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./systick_utils.obj" "./typing.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+"../cc3200v1p32.cmd", line 74: error #10099-D: program will not fit into available memory, or the section contains a call site that requires a trampoline that can't be generated for this section. placement with alignment fails for section ".const" size 0x15f15.  Available memory ranges:
+   SRAM_CODE    size: 0x13000      unused: 0xd5b2       max hole: 0xd5b2    
+error #10010: errors encountered during linking; "spi_demo.out" not built
+ 
+>> Compilation failure
+makefile:144: recipe for target 'spi_demo.out' failed
+gmake[1]: *** [spi_demo.out] Error 1
+makefile:140: recipe for target 'all' failed
+gmake: *** [all] Error 2
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/Josh/Desktop/EEC 172/labs/lab3_part1/spi_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 340: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 341: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 342: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 371: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 470: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 475: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 478: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 524: warning #145-D: a value of type "const int *" cannot be used to initialize an entity of type "int *"
+"../main.c", line 524: warning #145-D: a value of type "const int *" cannot be used to initialize an entity of type "int *"
+"../main.c", line 524: warning #145-D: a value of type "const int *" cannot be used to initialize an entity of type "int *"
+"../main.c", line 524: warning #145-D: a value of type "const int *" cannot be used to initialize an entity of type "int *"
+"../main.c", line 524: warning #145-D: a value of type "const int *" cannot be used to initialize an entity of type "int *"
+"../main.c", line 524: warning #145-D: a value of type "const int *" cannot be used to initialize an entity of type "int *"
+"../main.c", line 533: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 534: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 535: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 547: warning #112-D: statement is unreachable
+"../main.c", line 565: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 581: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 682: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 683: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 684: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 686: warning #179-D: variable "x" was declared but never referenced
+"../main.c", line 687: warning #179-D: variable "y" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "spi_demo.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"spi_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="spi_demo_linkInfo.xml" --rom_model -o "spi_demo.out" "./Adafruit_GFX.obj" "./Adafruit_SSD1351.obj" "./main.obj" "./oled_test.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./systick_utils.obj" "./typing.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+"../cc3200v1p32.cmd", line 74: error #10099-D: program will not fit into available memory, or the section contains a call site that requires a trampoline that can't be generated for this section. placement with alignment fails for section ".const" size 0x15f15.  Available memory ranges:
+   SRAM_CODE    size: 0x13000      unused: 0xd63a       max hole: 0xd63a    
+error #10010: errors encountered during linking; "spi_demo.out" not built
+ 
+>> Compilation failure
+makefile:144: recipe for target 'spi_demo.out' failed
+gmake[1]: *** [spi_demo.out] Error 1
+makefile:140: recipe for target 'all' failed
+gmake: *** [all] Error 2
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/Josh/Desktop/EEC 172/labs/lab3_part1/spi_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 340: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 341: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 342: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 371: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 470: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 475: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 478: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 524: warning #145-D: a value of type "const int *" cannot be used to initialize an entity of type "int *"
+"../main.c", line 524: warning #145-D: a value of type "const int *" cannot be used to initialize an entity of type "int *"
+"../main.c", line 524: warning #145-D: a value of type "const int *" cannot be used to initialize an entity of type "int *"
+"../main.c", line 524: warning #145-D: a value of type "const int *" cannot be used to initialize an entity of type "int *"
+"../main.c", line 533: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 534: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 535: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 547: warning #112-D: statement is unreachable
+"../main.c", line 565: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 581: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 679: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 680: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 681: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 683: warning #179-D: variable "x" was declared but never referenced
+"../main.c", line 684: warning #179-D: variable "y" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "spi_demo.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"spi_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="spi_demo_linkInfo.xml" --rom_model -o "spi_demo.out" "./Adafruit_GFX.obj" "./Adafruit_SSD1351.obj" "./main.obj" "./oled_test.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./systick_utils.obj" "./typing.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+"../cc3200v1p32.cmd", line 73: error #10099-D: program will not fit into available memory, or the section contains a call site that requires a trampoline that can't be generated for this section. placement with alignment fails for section ".text" size 0x55b3.  Available memory ranges:
+   SRAM_CODE    size: 0x13000      unused: 0x17e8       max hole: 0x17e8    
+error #10010: errors encountered during linking; "spi_demo.out" not built
+ 
+>> Compilation failure
+makefile:144: recipe for target 'spi_demo.out' failed
+gmake[1]: *** [spi_demo.out] Error 1
+makefile:140: recipe for target 'all' failed
+gmake: *** [all] Error 2
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/Josh/Desktop/EEC 172/labs/lab3_part1/spi_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 340: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 341: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 342: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 371: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 470: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 475: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 478: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 524: warning #145-D: a value of type "const int *" cannot be used to initialize an entity of type "int *"
+"../main.c", line 524: warning #145-D: a value of type "const int *" cannot be used to initialize an entity of type "int *"
+"../main.c", line 533: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 534: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 535: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 547: warning #112-D: statement is unreachable
+"../main.c", line 565: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 581: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 679: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 680: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 681: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 683: warning #179-D: variable "x" was declared but never referenced
+"../main.c", line 684: warning #179-D: variable "y" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "spi_demo.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"spi_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="spi_demo_linkInfo.xml" --rom_model -o "spi_demo.out" "./Adafruit_GFX.obj" "./Adafruit_SSD1351.obj" "./main.obj" "./oled_test.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./systick_utils.obj" "./typing.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "spi_demo.out"
+ 
+C:/ti/ccs1250/ccs/utils/tiobj2bin/tiobj2bin spi_demo.out spi_demo.bin C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armofd C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armhex C:/ti/ccs1250/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'spi_demo.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/Josh/Desktop/EEC 172/labs/lab3_part1/spi_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 340: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 341: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 342: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 371: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 470: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 475: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 478: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 524: warning #145-D: a value of type "const int *" cannot be used to initialize an entity of type "int *"
+"../main.c", line 524: warning #145-D: a value of type "const int *" cannot be used to initialize an entity of type "int *"
+"../main.c", line 533: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 534: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 535: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 564: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 581: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 679: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 680: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 681: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 683: warning #179-D: variable "x" was declared but never referenced
+"../main.c", line 684: warning #179-D: variable "y" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "spi_demo.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"spi_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="spi_demo_linkInfo.xml" --rom_model -o "spi_demo.out" "./Adafruit_GFX.obj" "./Adafruit_SSD1351.obj" "./main.obj" "./oled_test.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./systick_utils.obj" "./typing.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "spi_demo.out"
+ 
+C:/ti/ccs1250/ccs/utils/tiobj2bin/tiobj2bin spi_demo.out spi_demo.bin C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armofd C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armhex C:/ti/ccs1250/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/Josh/Desktop/EEC 172/labs/lab3_part1/spi_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 340: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 341: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 342: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 371: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 470: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 475: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 478: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 524: warning #145-D: a value of type "const int *" cannot be used to initialize an entity of type "int *"
+"../main.c", line 524: warning #145-D: a value of type "const int *" cannot be used to initialize an entity of type "int *"
+"../main.c", line 533: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 534: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 535: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 564: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 584: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 682: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 683: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 684: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 686: warning #179-D: variable "x" was declared but never referenced
+"../main.c", line 687: warning #179-D: variable "y" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "spi_demo.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"spi_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="spi_demo_linkInfo.xml" --rom_model -o "spi_demo.out" "./Adafruit_GFX.obj" "./Adafruit_SSD1351.obj" "./main.obj" "./oled_test.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./systick_utils.obj" "./typing.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "spi_demo.out"
+ 
+C:/ti/ccs1250/ccs/utils/tiobj2bin/tiobj2bin spi_demo.out spi_demo.bin C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armofd C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armhex C:/ti/ccs1250/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/Josh/Desktop/EEC 172/labs/lab3_part1/spi_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 340: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 341: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 342: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 371: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 470: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 475: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 478: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 493: error #66: expected a ";"
+"../main.c", line 496: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 530: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 531: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 532: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 561: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 581: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 600: error #20: identifier "arm" is undefined
+"../main.c", line 618: error #20: identifier "body" is undefined
+"../main.c", line 627: error #20: identifier "right_leg" is undefined
+"../main.c", line 636: error #20: identifier "left_leg" is undefined
+"../main.c", line 653: error #20: identifier "victory" is undefined
+"../main.c", line 728: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 729: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 730: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 732: warning #179-D: variable "x" was declared but never referenced
+"../main.c", line 733: warning #179-D: variable "y" was declared but never referenced
+6 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/Josh/Desktop/EEC 172/labs/lab3_part1/spi_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 340: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 341: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 342: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 371: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 470: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 475: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 478: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 493: error #66: expected a ";"
+"../main.c", line 530: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 531: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 532: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 561: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 581: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 600: error #20: identifier "arm" is undefined
+"../main.c", line 618: error #20: identifier "body" is undefined
+"../main.c", line 728: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 729: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 730: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 732: warning #179-D: variable "x" was declared but never referenced
+"../main.c", line 733: warning #179-D: variable "y" was declared but never referenced
+3 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/Josh/Desktop/EEC 172/labs/lab3_part1/spi_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 340: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 341: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 342: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 371: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 470: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 475: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 478: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 530: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 531: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 532: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 561: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 581: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 618: error #20: identifier "body" is undefined
+"../main.c", line 728: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 729: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 730: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 732: warning #179-D: variable "x" was declared but never referenced
+"../main.c", line 733: warning #179-D: variable "y" was declared but never referenced
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/Josh/Desktop/EEC 172/labs/lab3_part1/spi_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 340: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 341: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 342: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 371: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 470: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 475: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 478: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 531: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 532: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 533: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 562: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 582: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 729: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 730: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 731: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 733: warning #179-D: variable "x" was declared but never referenced
+"../main.c", line 734: warning #179-D: variable "y" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "spi_demo.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"spi_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="spi_demo_linkInfo.xml" --rom_model -o "spi_demo.out" "./Adafruit_GFX.obj" "./Adafruit_SSD1351.obj" "./main.obj" "./oled_test.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./systick_utils.obj" "./typing.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "spi_demo.out"
+ 
+C:/ti/ccs1250/ccs/utils/tiobj2bin/tiobj2bin spi_demo.out spi_demo.bin C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armofd C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armhex C:/ti/ccs1250/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'spi_demo.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/Josh/Desktop/EEC 172/labs/lab3_part1/spi_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 340: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 341: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 342: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 371: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 470: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 475: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 478: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 531: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 532: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 533: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 562: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 582: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 729: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 730: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 731: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 733: warning #179-D: variable "x" was declared but never referenced
+"../main.c", line 734: warning #179-D: variable "y" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "spi_demo.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"spi_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="spi_demo_linkInfo.xml" --rom_model -o "spi_demo.out" "./Adafruit_GFX.obj" "./Adafruit_SSD1351.obj" "./main.obj" "./oled_test.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./systick_utils.obj" "./typing.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "spi_demo.out"
+ 
+C:/ti/ccs1250/ccs/utils/tiobj2bin/tiobj2bin spi_demo.out spi_demo.bin C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armofd C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armhex C:/ti/ccs1250/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/Josh/Desktop/EEC 172/labs/lab3_part1/spi_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 340: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 341: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 342: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 371: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 470: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 475: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 478: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 531: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 532: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 533: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 562: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 582: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 729: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 730: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 731: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 733: warning #179-D: variable "x" was declared but never referenced
+"../main.c", line 734: warning #179-D: variable "y" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "spi_demo.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"spi_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="spi_demo_linkInfo.xml" --rom_model -o "spi_demo.out" "./Adafruit_GFX.obj" "./Adafruit_SSD1351.obj" "./main.obj" "./oled_test.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./systick_utils.obj" "./typing.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "spi_demo.out"
+ 
+C:/ti/ccs1250/ccs/utils/tiobj2bin/tiobj2bin spi_demo.out spi_demo.bin C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armofd C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armhex C:/ti/ccs1250/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/Josh/Desktop/EEC 172/labs/lab3_part1/spi_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 340: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 341: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 342: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 371: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 470: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 475: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 478: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 531: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 532: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 533: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 562: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 582: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 729: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 730: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 731: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 733: warning #179-D: variable "x" was declared but never referenced
+"../main.c", line 734: warning #179-D: variable "y" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "spi_demo.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"spi_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="spi_demo_linkInfo.xml" --rom_model -o "spi_demo.out" "./Adafruit_GFX.obj" "./Adafruit_SSD1351.obj" "./main.obj" "./oled_test.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./systick_utils.obj" "./typing.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "spi_demo.out"
+ 
+C:/ti/ccs1250/ccs/utils/tiobj2bin/tiobj2bin spi_demo.out spi_demo.bin C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armofd C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armhex C:/ti/ccs1250/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/Josh/Desktop/EEC 172/labs/lab3_part1/spi_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 340: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 341: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 342: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 371: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 470: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 475: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 478: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 531: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 532: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 533: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 562: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 582: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 729: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 730: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 731: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 733: warning #179-D: variable "x" was declared but never referenced
+"../main.c", line 734: warning #179-D: variable "y" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "spi_demo.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"spi_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="spi_demo_linkInfo.xml" --rom_model -o "spi_demo.out" "./Adafruit_GFX.obj" "./Adafruit_SSD1351.obj" "./main.obj" "./oled_test.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./systick_utils.obj" "./typing.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "spi_demo.out"
+ 
+C:/ti/ccs1250/ccs/utils/tiobj2bin/tiobj2bin spi_demo.out spi_demo.bin C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armofd C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armhex C:/ti/ccs1250/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'spi_demo.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'spi_demo.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'spi_demo.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'spi_demo.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'spi_demo.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'spi_demo.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'spi_demo.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'spi_demo.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'spi_demo.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'spi_demo.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'spi_demo.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'spi_demo.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project spi_demo ****
+
+"C:\\ti\\ccs1250\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../main.c"
+Invoking: Arm Compiler
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --include_path="C:/Users/Josh/Desktop/EEC 172/labs/lab3_part1/spi_demo" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/inc/" --include_path="C:/ti/CC3200SDK_1.5.0/cc3200-sdk/example/common/" --include_path="C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 340: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 341: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 342: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 367: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 466: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 471: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 474: warning #225-D: function "drawChar" declared implicitly
+"../main.c", line 527: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 528: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 529: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 558: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 578: warning #169-D: argument of type "volatile char *" is incompatible with parameter of type "const char *"
+"../main.c", line 724: warning #225-D: function "setTextSize" declared implicitly
+"../main.c", line 725: warning #225-D: function "setTextColor" declared implicitly
+"../main.c", line 726: warning #225-D: function "setCursor" declared implicitly
+"../main.c", line 728: warning #179-D: variable "x" was declared but never referenced
+"../main.c", line 729: warning #179-D: variable "y" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "spi_demo.out"
+Invoking: Arm Linker
+"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=none -me -Ooff --define=ccs --define=cc3200 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"spi_demo.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="spi_demo_linkInfo.xml" --rom_model -o "spi_demo.out" "./Adafruit_GFX.obj" "./Adafruit_SSD1351.obj" "./main.obj" "./oled_test.obj" "./pin_mux_config.obj" "./startup_ccs.obj" "./systick_utils.obj" "./typing.obj" "./uart_if.obj" "../cc3200v1p32.cmd"  -l"C:/ti/CC3200SDK_1.5.0/cc3200-sdk/driverlib/ccs/Release/driverlib.a" -llibc.a 
+<Linking>
+Finished building target: "spi_demo.out"
+ 
+C:/ti/ccs1250/ccs/utils/tiobj2bin/tiobj2bin spi_demo.out spi_demo.bin C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armofd C:/ti/ccs1250/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armhex C:/ti/ccs1250/ccs/utils/tiobj2bin/mkhex4bin
+ 
+
+**** Build Finished ****
